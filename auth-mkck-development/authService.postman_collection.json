@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "cf3bf86e-5c3e-465f-bdb7-71ebdd2a85e7",
+		"name": "authService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:9632/setAuth",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tenantId\":139,\n    \"authRequired\":2,\n    \"authReqMaster\": \"Country\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9632/setAuth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9632",
+					"path": [
+						"setAuth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9631/masters/Authrization/Country",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"countryCode\":\"Ca\",\n\"tenantId\":\"159\",\n\"languageCode\":\"CA\",\n\"countryName\":\"india is\",\n\"countryAbbrevation\":\"India is\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9631/masters/Authrization/Country",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9631",
+					"path": [
+						"masters",
+						"Authrization",
+						"Country"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
